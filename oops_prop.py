@@ -18,9 +18,9 @@ class Chartbook:
         elif user_input == "2":
             self.signin()
         elif user_input == "3":
-            pass
+            self.my_post()
         elif user_input == "4":
-            pass
+            self.send()
         else:
             exit()
     
@@ -44,7 +44,24 @@ class Chartbook:
                 print("Please input correct credictial\n")
             print("\n")
             self.menu()
+    def my_post(self):
+        if self.loggedin == True:
+            txt = input("enter your Post:\t")
+            print(f"Following content has been posted -> {txt}")
+        else:
+            print("you need to login this account first")
+        print("\n")
+        self.menu()
+    def send(self):
+        if self.loggedin == True:
+            txt = input("enter your message:\t")
+            frnd = input("whon to send this message: ")
+            print(f"Following message has been sent  to {frnd}")
+        else:
+            print("you need to login this account first")
+        print("\n")
+        self.menu()
 
 
-obj = Chartbook()
+# obj = Chartbook()
 
